@@ -8,13 +8,7 @@ A blazingly fast Stack Overflow clone running the real Stack Exchange dataset.
 
 ## Running locally
 
-### Node
-
-1. Run `yarn` in the App directory
-2. Run `yarn` in the `App/client` directory
-3. In the App directory, run `yarn run dev`
-
-### Dgraph
+### Dgraph(Preparing data)
 
 This app is currently compatible with Dgraph v0.8.1
 
@@ -37,6 +31,12 @@ brew install p7zip
 5. Load graph data files into Dgraph. From the current directory:
 
        for category in comments posts tags users votes; do docker exec -it dgraph dgraphloader -r $category.rdf.gz; done
+
+### Run App
+
+1. Run `yarn` in the App directory
+2. Run `yarn` in the `App/client` directory
+3. In the App directory, run `yarn run dev`
 
 
 ## Stack
